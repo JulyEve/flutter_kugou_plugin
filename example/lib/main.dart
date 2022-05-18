@@ -30,11 +30,12 @@ class _MyAppState extends State<MyApp> {
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
     try {
-      platformVersion =
-          await FlutterKugouPlugin.platformVersion ?? 'Unknown platform version';
+      platformVersion = await FlutterKugouPlugin.platformVersion ?? 'Unknown platform version';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
+
+    FlutterKugouPlugin.init("10158", "Y0j30R5KSyHAESMuGnwT543aGRfcCpyo");
 
     // If the widget was removed from the tree while the asynchronous platform
     // message was in flight, we want to discard the reply rather than calling
